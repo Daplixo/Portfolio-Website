@@ -1,0 +1,191 @@
+/* Overall page background and font */
+body {
+    background-color: brown;
+    /* Sets the background color of the body */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Font family for the text */
+    margin: 0;
+    /* Removes default margin */
+}
+
+/* Styling for the first header section */
+.firstdiv {
+    font-style: italic;
+    /* Makes the text italic */
+    font-size: 35px;
+    /* Sets font size */
+    color: white;
+    /* Text color */
+    font-weight: bold;
+    /* Makes the text bold */
+    background-color: black;
+    /* Background color of the header */
+    padding: 0;
+    /* Removes padding */
+    margin: 0;
+    /* Removes margin */
+    line-height: 0;
+    /* Line spacing */
+    box-sizing: border-box;
+    /* Includes padding and border in the element's total width/height */
+}
+
+/* Wrapper for marquee text to ensure it scrolls within bounds */
+.marquee-wrapper {
+    width: 100%;
+    /* Full width of the container */
+    overflow: hidden;
+    /* Hides overflowing text */
+    white-space: nowrap;
+    /* Prevents text wrapping */
+    position: relative;
+    /* Relative positioning for scrolling */
+}
+
+/* Marquee content scrolling animation */
+.marquee {
+    display: flex;
+    /* Flex layout for the marquee items */
+    animation: marquee 120s linear infinite;
+    /* Continuous scrolling animation */
+}
+
+.marquee span {
+    display: inline-block;
+    /* Inline-block elements for proper spacing */
+    margin-right: 50px;
+    /* Space between each marquee item */
+}
+
+/* Defines the continuous scrolling effect for the marquee */
+@keyframes marquee {
+    0% {
+        transform: translateX(-100%);
+        /* Starts off-screen */
+    }
+
+    100% {
+        transform: translateX(0%);
+        /* Ends on-screen */
+    }
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: rgba(0, 0, 0, 0.267);
+    /* Transparent black background */
+    height: 3rem;
+    /* Reduced height for a compact design */
+    display: flex;
+    /* Flex layout for navigation items */
+    justify-content: space-between;
+    /* Space between search bar and nav items */
+    align-items: center;
+    /* Vertically center items */
+    padding: 0 1rem;
+    /* Left and right padding */
+    box-sizing: border-box;
+    /* Includes padding and border in element dimensions */
+}
+
+/* Navigation items */
+nav span {
+    color: white;
+    /* Text color */
+    font-size: 1.2rem;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor for interactive elements */
+    padding: 0.5rem 1rem;
+    /* Padding for clickable area */
+    transition: background-color 0.3s;
+    /* Smooth hover transition */
+}
+
+nav span:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Light hover background effect */
+    border-radius: 0px;
+    /* Ensures no rounded edges */
+}
+/* Style for navigation links */
+nav a {
+    color: white;
+    /* Match the theme color */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 1.2rem;
+    /* Adjust font size */
+    padding: 0.5rem 1rem;
+    /* Add padding for clickable area */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transitions for hover effects */
+}
+
+/* Active link styling */
+nav a:active {
+    color: #f0f0f0;
+    /* Slightly dimmed color when clicked */
+}
+
+/* Search bar container */
+.search-container {
+    display: flex;
+    /* Flex layout for input and button */
+    justify-content: flex-start;
+    /* Aligns items to the left */
+    align-items: center;
+    /* Vertically centers items */
+    margin-right: auto;
+    /* Pushes other nav items to the right */
+    height: 100%;
+    /* Matches navigation bar height */
+}
+
+/* Input box styling */
+.search-container input {
+    height: 2rem;
+    /* Explicit height to match the button */
+    padding: 0 0.5rem;
+    /* Inner padding for text */
+    font-size: 1rem;
+    /* Font size for the input text */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Low-contrast background */
+    border: none;
+    /* Removes border */
+    border-radius: 0;
+    /* Removes rounded edges */
+    color: #fff;
+    /* White text color */
+    outline: none;
+    /* Removes focus outline */
+}
+
+/* Button styling */
+.search-container button {
+    height: 2rem;
+    /* Matches the height of the input box */
+    padding: 0 1rem;
+    /* Inner padding for better click area */
+    font-size: 1rem;
+    /* Font size */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Low-contrast background */
+    color: white;
+    /* White text color */
+    border: none;
+    /* Removes border */
+    border-radius: 0;
+    /* Removes rounded edges */
+    cursor: pointer;
+    /* Pointer cursor for interactivity */
+    transition: background-color 0.3s;
+    /* Smooth hover transition */
+}
+
+/* Hover effect for the button */
+.search-container button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Slightly brighter on hover */
+}
