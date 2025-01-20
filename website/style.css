@@ -3,6 +3,13 @@ body {
     background-color: brown;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ensure consistent box model */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure full height for body */
 }
 
 /* Styling for the first header section */
@@ -176,14 +183,14 @@ footer {
     background-color: rgba(0, 0, 0, 0.267);
     color: white;
     padding: 0.5rem 0;
-    /* Reduced padding for smaller height */
     text-align: center;
     font-size: 1rem;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     box-sizing: border-box;
-    /* Ensure padding is included in width/height calculation */
+    margin-top: auto;
+    /* Ensure footer stays at the bottom */
+    z-index: 0;
+    /* Keep footer in the background layer */
 }
 
 footer p {
@@ -192,14 +199,6 @@ footer p {
 }
 
 /* Ensuring the body takes full height */
-body,
-html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
 main {
     flex: 1;
 }
@@ -209,4 +208,197 @@ main {
     footer p {
         font-size: 1rem;
     }
+}
+
+/* Blur effect for background (applied to elements behind the verification box) */
+.blur-background {
+    position: relative;
+    z-index: 0;
+    filter: blur(3px);
+    /* Subtle blur for clean appearance */
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Minimal tint */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure full height for blur background */
+}
+
+/* Updated Styling for Verification Box */
+.verification-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    /* White background */
+    padding: 2rem;
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    /* Higher z-index to ensure visibility */
+    max-width: 350px;
+    width: 90%;
+    /* Responsive sizing */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    /* Black font color */
+}
+
+/* Styling the input field */
+.verification-box input {
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 90%;
+    background-color: rgba(255, 0, 0, 0.1);
+    /* Light red background */
+    color: black;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Styling the submit button */
+.verification-box button {
+    padding: 0.8rem;
+    border: none;
+    background-color: #a52a2a;
+    /* Matching red button */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.verification-box button:hover {
+    background-color: #cc4444;
+    /* Darker red on hover */
+}
+
+/* Error message style */
+.error-message {
+    color: #FF6347;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Initially hide homepage content */
+.homepage-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0;
+    text-align: center;
+}
+
+/* Ensure the homepage content fades in properly */
+.homepage-content.visible {
+    opacity: 1;
+}
+
+/* Add a fade-out transition to the verification box */
+.verification-box {
+    transition: opacity 1s ease-out;
+    /* Smooth fade-out */
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    /* Prevent interaction when the box is hidden */
+}
+
+/* Style for the password container (input + button) */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Style the button for the password visibility toggle */
+#togglePassword {
+    background: none;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: absolute;
+    right: 10px;
+}
+/* Blur effect for background (applied to elements behind the verification box) */
+.blur-background {
+    position: relative;
+    z-index: 0;
+    filter: blur(3px);
+    /* Apply blur effect */
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Minimal tint */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure full height for blur background */
+}
+
+/* To unblur the background after successful verification */
+.blur-background.unblurred {
+    filter: none;
+    /* Remove blur effect */
+}
+
+/* Updated Styling for Verification Box */
+.verification-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    max-width: 350px;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    transition: opacity 1s ease-out;
+    /* Smooth fade-out effect */
+}
+
+/* Hide the verification box when it is hidden */
+.verification-box.hidden {
+    opacity: 0;
+    pointer-events: none;
+    /* Prevent interaction when hidden */
+}
+
+/* Fade in homepage content after password is verified */
+.homepage-content.visible {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Style for the password container (input + button) */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Style the button for the password visibility toggle */
+#togglePassword {
+    background: none;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: absolute;
+    right: 10px;
 }
