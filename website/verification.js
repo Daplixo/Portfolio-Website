@@ -11,7 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const verificationBox = document.getElementById("verifyBox");
   const correctPassword = "@21Sep2005"; // Replace with your password
 
-  // Check if the user has already verified and stored it in sessionStorage
+  // Ensure the elements are present before continuing
+  if (!submitButton || !passwordInput || !verificationBox) {
+    console.error("Required elements missing on this page.");
+    return; // Stop execution if elements aren't present
+  }
+
+  // Check if the user has already verified and stored it in sessionStorage or localStorage
   if (sessionStorage.getItem("verified") === "true") {
     // If verified, immediately hide the verification box and unblur the background
     homepageContent.classList.add("visible");
@@ -21,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     // Otherwise, show the verification box and apply the blur effect
     verificationBox.style.display = "block";  // Show the verification box
-    blurArea.classList.remove("unblurred");   // Apply the blur
+    blurArea.classList.remove("unblurred");   // Apply the blur effect
     disableBackground();
   }
 
