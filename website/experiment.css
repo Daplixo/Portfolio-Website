@@ -189,19 +189,19 @@ td:first-child {
 .sub1_2{
     text-align: center;
 }
-.links{
-    display: flex;
+.experiment-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 10px;
     height: 600px;
     border-radius: 8px;
-    justify-content:space-between;
+    justify-content:center;
     margin-top: 20px;
     background-color: #811c1c;
 
 }
-.experiment-link{
-    align-items: center;
-    color:#ffffff;
-}
+
 .box3{
         display: flex;
         height: 600px;
@@ -296,7 +296,7 @@ td:first-child {
     transform: scale(1.1);
     cursor: pointer;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), cursor 0.3s ease, box-shadow 0.3s ease;
-    background: linear-gradient(45deg, rgb(224, 60, 60), #ff4848);
+    background: linear-gradient(45deg, rgb(224, 60, 60), #ff5555);
 
 }
 /* Remove pointer-events from the blur class */
@@ -333,4 +333,10 @@ body {
 body.blur-background {
     background-color: brown;
     /* Prevents the background from turning white */
+}
+.social-icon {
+    height: 100px;
+    width: 100px;
+    margin-top: 45px;
+    border-radius: 16px;
 }
