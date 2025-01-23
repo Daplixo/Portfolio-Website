@@ -6,9 +6,11 @@
     <title>Aashutosh Sharma's Portfolio</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+    <script src="searchbar.js" defer></script>
     <!-- Link to the JS file for password verification -->
   </head>
   <body>
+    <div id="blurarea1"></div>
     <!-- Content to be blurred behind verification box -->
     <div id="blurArea" class="blur-background">
       <header>
@@ -38,7 +40,12 @@
       <div>
         <nav>
           <div class="search-container">
-            <form action="/search" method="get">
+            <form
+              action="/search"
+              method="get"
+              id="searchForm"
+              action="javascript:void(0);"
+            >
               <input
                 type="text"
                 name="query"

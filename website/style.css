@@ -1,17 +1,69 @@
-/* Overall page background and font */
+/* Apply the animation uniformly across all pages */
 body {
     background-color: brown;
+    /* Fallback solid background color */
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Ensure consistent box model */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Ensure full height for body */
+    overflow-y: auto;
+    /* Allows vertical scrolling */
+    position: relative;
+    /* Necessary for the pseudo-element to cover the page */
 }
 
+/* Create the overlay for the background image */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/grid.png');
+    /* Path to your transparent PNG image */
+    background-repeat: repeat;
+    /* Ensure the image repeats both horizontally and vertically */
+    background-position: center;
+    /* Centers the image */
+    background-size: auto;
+    /* Keeps the image in its original size */
+    background-attachment: scroll;
+    /* Allows the background to scroll with the page */
+    opacity: 0.4;
+    /* Reduce the opacity of the image (adjust as needed) */
+    pointer-events: none;
+    /* Prevents interference with page content */
+    z-index: -1;
+    /* Keeps the image behind content */
+    animation: gridscroll 10s linear infinite;
+    /* Set consistent animation duration and direction */
+}
+
+
+/* Keyframe animation for the background */
+@keyframes gridscroll {
+    0% {
+        background-position: 0 0;
+        /* Start from the top left */
+    }
+
+    100% {
+        background-position: 100% 100%;
+        /* Move the image to the bottom right */
+    }
+}
+
+/* Specific override for the experiments tab */
+body.experiments-page::before {
+    animation: none;
+    /* Ensure consistent animation */
+}
+
+/* Add other styling for the experiments page if needed */
 /* Styling for the first header section */
 .firstdiv {
     font-style: italic;
@@ -57,7 +109,7 @@ body {
 
 /* Navigation bar styles */
 nav {
-    background-color: rgba(0, 0, 0, 0.267);
+    background-color: rgba(0, 0, 0, 0.467);
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -216,7 +268,6 @@ main {
     z-index: 0;
     filter: blur(3px);
     /* Subtle blur for clean appearance */
-    background-color: rgba(0, 0, 0, 0.05);
     /* Minimal tint */
     display: flex;
     flex-direction: column;
@@ -330,6 +381,7 @@ main {
     position: absolute;
     right: 10px;
 }
+
 /* Blur effect for background (applied to elements behind the verification box) */
 .blur-background {
     position: relative;
@@ -401,4 +453,9 @@ main {
     font-size: 1.2rem;
     position: absolute;
     right: 10px;
+}
+/* Highlighted text */
+.highlight {
+    background-color: yellow;
+    color: black;
 }
