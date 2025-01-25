@@ -7,12 +7,15 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <script src="searchbar.js" defer></script>
+    <link rel="stylesheet" href="sliderHome.css" />
+    <script src="slider.js" defer></script>
     <!-- Link to the JS file for password verification -->
+    
   </head>
   <body>
-    <div id="blurarea1"></div>
     <!-- Content to be blurred behind verification box -->
     <div id="blurArea" class="blur-background">
+      
       <header>
         <div class="firstdiv">
           <div class="marquee-wrapper">
@@ -64,7 +67,69 @@
             <span><a href="Contact.html">Contact</a></span>
           </div>
         </nav>
+        <!-- Image Slider Section -->
+        <div class="slider-container">
+          <h2 class="slider-heading">Featured and Recommended</h2>
+          <button class="arrow arrow-left" id="prev">❮</button>
+          <div class="slides" id="slides">
+            <div class="slide">
+              <img
+                src="images/SLider images home tab/Image_1.jpg"
+                alt="Image 1"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="images/SLider images home tab/Image_2.jpg"
+                alt="Image 2"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="images/SLider images home tab/Image_3.jpg"
+                alt="Image 3"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="images/SLider images home tab/Image_4.jpg"
+                alt="Image 4"
+              />
+            </div>
+            <div>
+              <img
+                src="images/SLider images home tab/Image_5.jpg"
+                alt="Image 5"
+              />
+            </div>
+            <div>
+              <img
+                src="images/SLider images home tab/Image_6.jpg"
+                alt="Image 6"
+              />
+            </div>
+          </div>
+          <button class="arrow arrow-right" id="next">❯</button>
+        </div>
+        <div class="dots-container" id="dotsContainer"></div>
       </div>
+    <div class="slider-container-1">
+          <h2 class="slider-heading">My Most Recent Videos</h2>
+          <button class="arrow arrow-left" id="prev">❮</button>
+          <div class="slides-1" id="slides-1">
+            <div class="slide-1">
+              <a href="https://youtu.be/SuinWdgqDEY?si=yMyJsViVLTqSwP6J" target="_blank" title="Click to watch the video">
+              <img
+                src="images/video 18 thumbnail version 2.png"
+                alt="Image 1"
+              />
+              </a>
+            </div>
+              </div>
+          <button class="arrow arrow-right" id="next">❯</button>
+        </div>
+        <div class="dots-container" id="dotsContainer"></div>
+       </div>     
       <footer>
         <div>
           <p>&copy; 2025 Aashutosh Sharma</p>

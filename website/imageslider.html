@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automatic Image Slider</title>
+    <style>
+      /* Slider container styling */
+      .slider {
+        position: relative;
+        width: 100%;
+        max-width: 800px; /* Adjust this for desired width */
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      /* Slide wrapper for images */
+      .slides {
+        display: flex;
+        width: 500%; /* Adjust based on number of images */
+        transition: transform 0.5s ease-in-out;
+      }
+
+      /* Individual slide styling */
+      .slide {
+        width: 100%;
+        flex-shrink: 0;
+      }
+
+      .slide img {
+        width: 100%;
+        display: block;
+      }
+
+      /* Dots for navigation */
+      .dots {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.3s;
+        cursor: pointer;
+      }
+
+      .dot.active {
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <img
+            src="https://via.placeholder.com/800x400?text=Slide+1"
+            alt="Slide 1"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://via.placeholder.com/800x400?text=Slide+2"
+            alt="Slide 2"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://via.placeholder.com/800x400?text=Slide+3"
+            alt="Slide 3"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://via.placeholder.com/800x400?text=Slide+4"
+            alt="Slide 4"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="https://via.placeholder.com/800x400?text=Slide+5"
+            alt="Slide 5"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Dots for navigation -->
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <script>
+      // JavaScript for the image slider
+      const slides = document.querySelector(".slides");
+      const dots = document.querySelectorAll(".dot");
+      const totalSlides = dots.length;
+      let currentIndex = 0;
+
+      function updateSlider() {
+        // Update the slide position
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Update dots' active state
+        dots.forEach((dot, index) => {
+          dot.classList.toggle("active", index === currentIndex);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+      }
+
+      // Automatically change slide every 7 seconds
+      setInterval(nextSlide, 7000);
+
+      // Add event listeners to dots for manual navigation
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          currentIndex = index;
+          updateSlider();
+        });
+      });
+
+      // Initialize slider
+      updateSlider();
+    </script>
+  </body>
+</html>

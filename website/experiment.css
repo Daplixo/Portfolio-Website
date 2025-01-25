@@ -1,27 +1,4 @@
-/* Example: Fast diagonal animation for experiments page */
 
-body{
-    background-color:rgb(165, 42, 42);
-}
-body.experiments-page::before {
-    animation: gridScrollDiagonal 60s linear infinite;
-}
-
-@keyframes gridScrollDiagonal {
-    0% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: -100% -100%;
-    }
-}
-.background-overlay {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.05);
-    /* Same as home page's blur-background */
-    min-height: 100vh;
-}
 /* Main content container (Centered grid) */
 main {
     display: grid;
@@ -326,19 +303,6 @@ body.blur-background {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     z-index: 105;
     /* Ensure it stays above the blur */
-}
-/* Ensure the background color remains brown during blur */
-body {
-    background-color: brown;
-    /* Set the background color to brown */
-    transition: background-color 0.3s ease;
-    /* Smooth background transition */
-}
-
-/* Ensuring that background color remains brown when the blur effect is applied */
-body.blur-background {
-    background-color: brown;
-    /* Prevents the background from turning white */
 }
 .social-icon {
     height: 150px;
