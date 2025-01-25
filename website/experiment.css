@@ -50,7 +50,7 @@ main {
 .experiment3_1,
 .experiment3_2,
 .experiment3_3 {
-    background-color: rgb(224, 60, 60);
+    background-color: #e03c3c;
     padding: 1rem;
     border-radius: 6px;
     z-index: 100;
@@ -103,6 +103,7 @@ table {
     box-sizing: border-box;
 }
 
+
 table caption {
     font-size: 0.8rem;
     font-weight: bold;
@@ -136,7 +137,12 @@ td:hover {
 td:first-child {
     font-weight: normal;
 }
-
+table summary {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgb(202, 67, 67);
+    margin-bottom: 10px;
+}
 /* Responsiveness */
 @media (max-width: 768px) {
     main {
@@ -335,8 +341,13 @@ body.blur-background {
     /* Prevents the background from turning white */
 }
 .social-icon {
-    height: 100px;
-    width: 100px;
+    height: 150px;
     margin-top: 45px;
     border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+.social-icon:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
