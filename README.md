@@ -88,8 +88,8 @@ While this is a personal project, I welcome feedback and suggestions. If you'd l
 
 ## 📬 **Contact**
 For any questions or suggestions, feel free to reach out:
-- Email: [your-email@example.com]
-- LinkedIn: [your-profile-link]
+- Email: [aashugfx@gmail.com]
+- LinkedIn: [https://www.linkedin.com/in/aashutoshsharma2111/]
 
 ---
 
