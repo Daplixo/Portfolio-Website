@@ -69,9 +69,9 @@ Stay tuned for updates every Saturday! 🚀
 ---
 
 ## 📸 **Screenshots**
-![Homepage](C:\Users\MSI-PC\Pictures\Screenshots\Screenshot 2025-01-25 124326.png)
-![Experiments Tab](path/to/image2.png)
-![Projects Tab](path/to/image3.png)
+![Work In Progress Screenshot](./website/images/wip/ss1.png)
+![Work In Progress Screenshot](./website/images/wip/ss2.png)
+![Work In Progress Screenshot](./website/images/wip/ss4.png)
 > Add your actual screenshot paths or links here.
 
 ---
