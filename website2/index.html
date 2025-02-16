@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #0d0d0d;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        background-image: url("images2/bg1.jpg");
+        background-size: contain; /* Ensures the image covers the entire screen */
+        background-repeat: no-repeat; /* Prevents tiling */
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      main hr {
+        border: 0;
+        background-color: rgb(42, 42, 42);
+        height: 4px;
+        margin: 40px 80px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        background-color: rgba(21, 21, 21, 0.58);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 33px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: rgb(54, 251, 235);
+      }
+      .left {
+        font-size: 2rem;
+        margin: 0 33px;
+      }
+      .leftsection .btn {
+        cursor: pointer;
+        background: rgba(39, 39, 39, 0.58);
+        color: rgb(255, 255, 255);
+        border: none;
+        padding: 12px;
+        border-radius: 4px;
+        font-size: 25px;
+      }
+      .right {
+        font-size: 1rem;
+      }
+      .firstsection {
+        display: flex;
+        justify-content: space-around;
+        margin: 160px 0;
+        align-items: center;
+      }
+      .firstsection > div {
+        width: 35%;
+      }
+      .leftsection {
+        font-size: 3.5rem;
+        margin-left: 50px;
+      }
+      .rightsection img {
+        width: 80%;
+        border-radius: 50%;
+      }
+      .purple {
+        color: rgb(54, 251, 235);
+      }
+      #element {
+        color: rgb(54, 251, 235);
+      }
+      .secondsection {
+        max-width: 80vw;
+        margin: auto;
+        height: 95vh;
+      }
+      .secondsection h1 {
+        font-size: 1.7rem;
+      }
+      .secondsection .box {
+        background-color: white;
+        width: 72vw;
+        height: 2px;
+        margin: 56px;
+        display: flex;
+      }
+      .secondsection .vertical {
+        height: 90px;
+        width: 1px;
+        background-color: white;
+        margin: 0 160px;
+      }
+      .verticaltitle {
+        position: relative;
+        top: 93px;
+        width: 180px;
+      }
+
+      .verticaldesc {
+        position: relative;
+        top: 100px;
+        width: 200px;
+        color: rgb(147, 147, 147);
+        font-size: 12px;
+      }
+      .milestone {
+        position: relative;
+        height: 23px;
+        bottom: 31px;
+      }
+      .footer {
+        background-color: rgba(21, 21, 21, 0.58);
+        height: 200px;
+      }
+      .footer {
+        display: flex;
+      }
+      .footer .footer-content {
+        height: 150px;
+        width: 35px;
+        margin: 10px 200px;
+      }
+      .footer h3 {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+      .footer-details {
+        font-size: 12px;
+        width: 200px;
+        color: rgb(147, 147, 147);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Aashutosh's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="firstsection">
+        <div class="leftsection">
+          Hi! My name is <span class="purple">Aashutosh</span>
+          <div>
+            <div>I am an aspiring</div>
+            <span id="element"></span>
+            <div class="buttons">
+              <button class="btn">Download Resume</button>
+              <button class="btn">Visit Github</button>
+            </div>
+          </div>
+        </div>
+        <div class="rightsection"><img src="images2/pfp1.jpg" alt="" /></div>
+      </section>
+      <hr />
+      <section class="secondsection">
+        <h1>Work Experiences</h1>
+        <div class="box">
+          <div class="vertical">
+            <img src="images2/milestone.png" alt="" class="milestone" />
+            <div class="verticaltitle">Job Role (2019-2021)</div>
+            <div class="verticaldesc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              dolor ducimus, odio perspiciatis voluptatem quasi minima
+              praesentium fugiat eaque nisi provident asperiores quia
+              consectetur fuga accusantium! Eligendi porro distinctio mollitia
+              magnam cupiditate suscipit accusantium!
+            </div>
+          </div>
+          <div class="vertical">
+            <img src="images2/milestone.png" alt="" class="milestone" />
+            <div class="verticaltitle">Job Role (2019-2021)</div>
+            <div class="verticaldesc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              dolor ducimus, odio perspiciatis voluptatem quasi minima
+              praesentium fugiat eaque nisi provident asperiores quia
+              consectetur fuga accusantium! Eligendi porro distinctio mollitia
+              magnam cupiditate suscipit accusantium!
+            </div>
+          </div>
+          <div class="vertical">
+            <img src="images2/milestone.png" alt="" class="milestone" />
+            <div class="verticaltitle">Job Role (2019-2021)</div>
+            <div class="verticaldesc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              dolor ducimus, odio perspiciatis voluptatem quasi minima
+              praesentium fugiat eaque nisi provident asperiores quia
+              consectetur fuga accusantium! Eligendi porro distinctio mollitia
+              magnam cupiditate suscipit accusantium!
+            </div>
+          </div>
+          <div class="vertical">
+            <img src="images2/milestone.png" alt="" class="milestone" />
+            <div class="verticaltitle">Job Role (2019-2021)</div>
+            <div class="verticaldesc">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero
+              dolor ducimus, odio perspiciatis voluptatem quasi minima
+              praesentium fugiat eaque nisi provident asperiores quia
+              consectetur fuga accusantium! Eligendi porro distinctio mollitia
+              magnam cupiditate suscipit accusantium!
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footer-content">
+          <h3>Text</h3>
+          <div class="footer-details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            maiores fugit animi ipsa natus atque et facere veniam, nulla
+            excepturi ratione perspiciatis consequatur?
+          </div>
+        </div>
+        <div class="footer-content">
+          <h3>Text</h3>
+          <div class="footer-details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            maiores fugit animi ipsa natus atque et facere veniam, nulla
+            excepturi ratione perspiciatis consequatur?
+          </div>
+        </div>
+        <div class="footer-content">
+          <h3>Text</h3>
+          <div class="footer-details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            maiores fugit animi ipsa natus atque et facere veniam, nulla
+            excepturi ratione perspiciatis consequatur?
+          </div>
+        </div>
+        <div class="footer-content">
+          <h3>Text</h3>
+          <div class="footer-details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+            maiores fugit animi ipsa natus atque et facere veniam, nulla
+            excepturi ratione perspiciatis consequatur?
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["<i>Ui Ux Designer</i>"],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>

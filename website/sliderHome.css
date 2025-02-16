@@ -22,7 +22,7 @@
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: auto%;
+    height: auto;
 }
 
 .slide {
