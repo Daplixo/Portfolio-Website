@@ -20,6 +20,7 @@ nav {
     justify-content: center;
     margin: 0 200px;
     font-size: 1rem;
+    letter-spacing: 1.6px;
     }
     
     nav ul li {
@@ -38,8 +39,9 @@ nav {
     
     .left {
     font-size: 2rem;
-    margin: 0 90px;
+    margin: 0 200px;
     font-weight: bold;
+    letter-spacing: -0.7px;
     }
     .right{
     font-size: 1rem;
@@ -56,13 +58,21 @@ nav {
     margin: 55px 55px;
     }
     .leftside h1 {
-     font-size: 3.6rem;
+     font-size: 4.2rem;
      margin-left: 50px;
      margin-top: 200px;
+     line-height: 4.7rem;
+     letter-spacing: -2px;
+     width: 750px;
      }
     .leftside p {
     font-size: 1rem;
     margin-left: 50px;
+    line-height: 2rem;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    width: 750px;
     }
     .leftside a{
         display: inline-flex;
@@ -70,11 +80,13 @@ nav {
             align-items: center;
             /* Centers vertically */
     margin-left: 50px;
-    margin-top: 20px;
+    margin-top: 30px;
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 1.4rem;
     transition: transform 0.3s ease;
+    letter-spacing: 0.8px;
+    word-spacing: 3px;
     }
     
     .leftside a::after {
