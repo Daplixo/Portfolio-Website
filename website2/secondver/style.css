@@ -1,0 +1,112 @@
+body {
+        font-family: "Poppins", sans-serif;
+        background-color: #ffffff;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(241, 241, 241);
+    margin: 10px 10px;
+    }
+    
+    nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0 200px;
+    font-size: 1rem;
+    }
+    
+    nav ul li {
+    list-style: none;
+    margin: 20px;
+    }
+    
+    nav ul li a {
+    text-decoration: none;
+    color: rgb(73, 73, 73);
+    }
+    
+    /* nav ul li a:hover {
+       color: rgb(54, 251, 235);
+    } */
+    
+    .left {
+    font-size: 2rem;
+    margin: 0 90px;
+    font-weight: bold;
+    }
+    .right{
+    font-size: 1rem;
+    }
+    .firstSec {
+    display: flex;
+    justify-content: space-between;
+    }
+    .leftside{
+    height: 750px;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    align-items: left;
+    margin: 55px 55px;
+    }
+    .leftside h1 {
+     font-size: 3.6rem;
+     margin-left: 50px;
+     margin-top: 200px;
+     }
+    .leftside p {
+    font-size: 1rem;
+    margin-left: 50px;
+    }
+    .leftside a{
+        display: inline-flex;
+            /* Aligns text and icon in one line */
+            align-items: center;
+            /* Centers vertically */
+    margin-left: 50px;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+    }
+    
+    .leftside a::after {
+        content: '\f054';
+            /* Font Awesome ">" icon */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            /* Adds the ">" icon */
+            margin-left: 8px;
+            /* Space between text and icon */
+            transition: transform 0.3s ease;
+        }
+    
+    .leftside a:hover::after {
+            transform: translateX(5px);
+            /* Slide the ">" icon on hover */
+        }
+    .rightside{
+    height: 850px;
+    width: 35%;
+    background-color: rgb(240, 240, 240);
+    align-items: right;
+    margin: 55px 215px;
+    }
+/* Second section starts from here */
+        .secondSec {
+            display: flex;
+            align-items: center;
+        }
+        .contentbox{
+            background-color: rgb(161, 161, 161);
+            height: 500px;
+            width: 80%;
+            margin:auto;
+        }
