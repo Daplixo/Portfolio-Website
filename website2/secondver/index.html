@@ -40,10 +40,30 @@
           </p>
           <a href="#">More about me</a>
         </div>
+        <div class="circle">
+          <div class="text-circle" id="text-circle">
+            <!-- Text will be dynamically added using JS -->
+          </div>
+          <div class="arrow">&#8595;</div>
+          <!-- Downward Arrow -->
+        </div>
+
         <div class="rightside"><div class="rightimg"></div></div>
       </section>
-      <section class="secondSec"><div class="contentbox"></div></section>
     </main>
     <footer></footer>
+    <script>
+      // JavaScript to create circular text effect
+      const text = "MY PROJECTS MY PROJECTS MY PROJECTS ";
+      const circleContainer = document.getElementById("text-circle");
+
+      // Split the text into individual letters and rotate them
+      for (let i = 0; i < text.length; i++) {
+        const span = document.createElement("span");
+        span.innerText = text[i];
+        span.style.transform = `rotate(${i * (360 / text.length)}deg)`;
+        circleContainer.appendChild(span);
+      }
+    </script>
   </body>
 </html>
